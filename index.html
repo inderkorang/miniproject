@@ -1,0 +1,458 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saarthi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg sticky-top bar">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <img src="./Asset/Logo.png" class="img-fluid" alt="Logo" width="250px" height="57px">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Sub section -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./support.html">Academic Support</a>
+                  </li>
+                  <a class="nav-link" href="./clubs.html">College Clubs</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./notes.html">Notes</a></li>
+                      <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1pRpVF6vs7-EFgUBcVXgcxmHswz1MeM7a">PYQs</a></li>
+                      <!-- <li><a class="dropdown-item" href="./pyq.html">PYQs</a></li> -->
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="./Asset/Ad.pdf">Academic Calender (Jul-Jan) 2023</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                  </li>
+                </ul>
+                <!--Login -Button trigger modal -->
+                <button type="button" class="btn btn-outline-success mx-3 " data-bs-toggle="modal" data-bs-target="#Login">
+                  Log In
+                </button>
+
+                <!-- Login Modal -->
+                <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="row mb-3">
+                            <label for="StudentId" class="col-sm-3 col-form-label">Student Id</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" id="StudentId">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputPassword1" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-8">
+                              <input type="password" class="form-control" id="inputPassword1">
+                            </div>
+                          </div>
+                        </form>
+
+                      </div>
+                      <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button> -->
+                        <button type="button" class="btn btn-primary" id="loginBtn">Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Login Alert -->
+                <div id="loginAlert" class="alert alert-success bottom-right d-none" role="alert">
+                  Login successful! Redirecting...
+                </div>
+                <!-- Complete detail Alert -->
+                <div id="NonloginAlert" class="alert alert-danger bottom-right d-none" role="alert">
+                  Enter Complete Deatils....
+                </div>
+                <!-- Cnf Password Alert -->
+                <div id="CnfAlert" class="alert alert-danger bottom-right d-none" role="alert">
+                  Enter The Same Password..
+                </div>
+                <!-- signup Alert -->
+                <div id="signupAlert" class="alert alert-success bottom-right d-none" role="alert">
+                  Register Successfully....
+                </div>
+                <!--sign Up -Button trigger modal -->
+                <button type="button" class="btn btn-outline-success mx-3" data-bs-toggle="modal" data-bs-target="#Signup">
+                  Sign Up
+                </button>
+                <!-- Sign Up Modal -->
+                <div class="modal fade" id="Signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="row mb-3">
+                            <label for="StudentId2" class="col-sm-3 col-form-label">Student Id</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" id="StudentId2">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputPassword2" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-8">
+                              <input type="password" class="form-control" id="inputPassword2">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-3 col-form-label">Confirm Password</label>
+                            <div class="col-sm-8">
+                              <input type="password" class="form-control" id="inputPassword3">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="Course" class="form-label">Course</label>
+                            <select id="Course" class="form-select">
+                              <option selected>Select</option>
+                              <option>B.Tech Computer Science and Engineering</option>
+                              <option>BCA</option>
+                              <option>B.Com</option>
+                              <option>B.Pharma</option>
+                              <option>BBA</option>
+                              <option>Bsc Agriculture</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="year" class="form-label">Year</label>
+                            <select id="year" class="form-select">
+                              <option selected>Year</option>
+                              <option>I Year</option>
+                              <option>II Year</option>
+                              <option>III Year</option>
+                              <option>IV Year</option>
+
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <button type="submit" class="btn btn-primary" id="signupBtn">Sign Up</button>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </nav>
+    <!-- Main Section -->
+          <section class="main">
+            <div
+              class="fixed-text text-center position-absolute top-50 start-50 translate-middle text-white text-sm-sm text-md">
+              <h1 class="fw-bolder">Welcome to SAARTHI </h1>
+              <p class="lead">Your guide to success in academics and campus life!</p>
+            </div>
+            <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="./Asset/mainImage1.webp" class="d-block w-100 img-fluid image" alt="gehu_image">
+                </div>
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="./Asset/mainImage3.jpg" class="d-block w-100 img-fluid image" alt="gehu_image">
+                </div>
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="./Asset/mainImage2.webp" class="d-block w-100 img-fluid image" alt="gehu_image">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="./Asset/image2.webp" class="d-block w-100 img-fluid image" alt="gehu_image">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="./Asset/image3.avif" class="d-block w-100 img-fluid image" alt="gehu_image">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+
+    <!-- About us Section -->
+          <div class="container my-3 ">
+            <h1 class="fs-1 mx-3 my-2 text-center">About Us</h1>
+            <div class="container">
+              <div class="row my-5">
+                <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+                  <img class="mb-4 img-fluid col-md-4 col-12 order-md-1 order-2" src="./Asset/vision.png" alt="Logo"
+                    width="100%" height="auto">
+                  <p class="fw-medium mb-4 text-md col-md-8 col-12 order-md-2 order-1 text-sm-start text-center"
+                    style="max-width: 650px;">
+                    "At GEHU Student Helpdesk, our vision is to foster a dynamic and supportive learning community where every
+                    student can thrive academically and personally. We envision a campus environment that transcends
+                    traditional boundaries, embracing innovation, collaboration, and inclusivity. Our goal is to be the
+                    guiding force that empowers students to navigate the complexities of their educational journey with
+                    confidence. We strive to create a space where curiosity is celebrated, challenges are met with resilience,
+                    and success is a shared achievement. Through a commitment to excellence, accessibility, and
+                    student-centric services, we aim to shape a future where every student can realize their full potential
+                    and contribute meaningfully to the world."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row my-5">
+                <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+                  <img class="mb-4 img-fluid col-md-4 col-12 order-md-2 order-2" src="./Asset/Motto.png" alt="Logo"
+                    width="100%" height="auto">
+                  <p class="fw-medium mb-4 text-md col-md-8 col-12 order-md-1 order-1 text-sm-start text-center"
+                    style="max-width: 650px;">
+                    At the heart of GEHU Student Helpdesk lies our unwavering commitment to student success. Our motto,
+                    'Empowering Students, Fostering Success,' encapsulates the core of our mission. We believe in providing
+                    not just assistance but empowerment, equipping every student with the tools and support needed to navigate
+                    the intricate landscape of academia. With a dedication to excellence, inclusivity, and community, we
+                    strive to create an environment where each student can not only overcome challenges but also flourish in
+                    their educational journey. At GEHU, we are not just a helpdesk; we are your partners in success, working
+                    hand in hand to shape a future filled with achievement and growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- What you will get section -->
+          <div class="container my-3 container-fluid">
+            <h1 class="fs-1 fw-bold mx-3 my-5 text-center">What will you get? </h1>
+            <div class="row row-cols-1 row-cols-md-4 row-cols-lg-5 ">
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded">
+                    <a href="#" class="d-block text-center p-4 fs-3  fw-medium">
+                        Senior Interection
+                    </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded ">
+                    <a href="./notes.html" class="d-block text-center p-4 fs-3 fw-medium">
+                        Subject Notes
+                    </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded">
+                    <a href="./notes.html" class="d-block text-center p-4 fs-3 fw-medium">
+                        PYQs
+                    </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded">
+                  <a href="./support.html" class="d-block text-center p-4 fs-3 fw-medium">
+                      Important Links
+                  </a>
+              </div>
+              
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded">
+                    <a href="./clubs.html" class="d-block text-center p-4 fs-3 fw-medium">
+                        College Clubs
+                    </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2 mx-md-3 my-3 box p-4 rounded">
+                    <a href="./support.html" class="d-block text-center p-4 fs-3  fw-medium">
+                        Teacher Connection
+                    </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-2  mx-md-3 my-3 box p-4 rounded">
+                    <a href="#" class="d-block text-center p-4 fs-3 fw-medium">
+                        Subject Syllabus
+                    </a>
+                </div>
+                
+                
+        
+            </div>
+          </div>
+        
+          <!-- Frequently asked question -->
+         <div class="container container-fluid">
+          <h1 class="fs-1 fw-bold mx-3 my-5 text-center">Frequenty Asked Question</h1>
+
+          <div class="accordion accordion-flush " id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <h1 class="fs-5 fw-medium">How can I access previous year question papers (PYQs)?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <h2> Home ->> Resources ->> PYQs</h2>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <h1 class="fs-5 fw-medium">Where can I get class notes and study materials?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h1 class="fs-5 fw-medium">How do I seek academic support or tutoring?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h1 class="fs-5 fw-medium">How can I connect with teachers and professors outside of class?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h1 class="fs-5 fw-medium">What emergency resources are available on campus?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h1 class="fs-5 fw-medium">How can I give feedback or suggestions to improve the helpdesk services?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+            <div class="accordion-item my-1">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed box rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h1 class="fs-5 fw-medium">How do I join or learn more about college clubs and organizations?</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
+         </div>
+
+          <!-- Credits -->
+          
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script>
+    //  Login Alert
+
+    document.getElementById('loginBtn').addEventListener('click', function () {
+
+      var studentId = document.getElementById('StudentId').value;
+      var password = document.getElementById('inputPassword1').value;
+
+      if (studentId.trim() === '' || password.trim() === '') {
+
+        document.getElementById('NonloginAlert').classList.remove('d-none');
+        setTimeout(function () {
+          document.getElementById('NonloginAlert').classList.add('d-none');
+        }, 2000);
+      } else {
+
+        document.getElementById('loginAlert').classList.remove('d-none');
+        setTimeout(function () {
+          document.getElementById('loginAlert').classList.add('d-none');
+        }, 2000);
+        //  $('#Login').modal('hide');
+      }
+
+    });
+
+    // signUp Alert
+    document.getElementById('signupBtn').addEventListener('click', function () {
+      var studentId = document.getElementById('StudentId2').value;
+      var password = document.getElementById('inputPassword2').value;
+      var Cnfpassword = document.getElementById('inputPassword3').value;
+
+
+
+      if (studentId.trim() === '' || password.trim() === '' || Cnfpassword.trim() === '') {
+        document.getElementById('NonloginAlert').classList.remove('d-none');
+        setTimeout(function () {
+          document.getElementById('NonloginAlert').classList.add('d-none');
+        }, 2000);
+      }
+      else if (password !== Cnfpassword) {
+        document.getElementById('CnfAlert').classList.remove('d-none');
+        setTimeout(function () {
+          document.getElementById('CnfAlert').classList.add('d-none');
+        }, 2000);
+
+      }
+      else {
+
+        document.getElementById('signupAlert').classList.remove('d-none');
+        setTimeout(function () {
+          document.getElementById('signupAlert').classList.add('d-none');
+        }, 2000);
+        // $('#Signup').modal('hide');
+      }
+    });
+  </script>
+</body>
+
+</html>

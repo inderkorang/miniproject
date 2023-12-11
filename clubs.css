@@ -1,0 +1,31 @@
+.bar{
+  background-color:rgb(243, 237, 248);
+}
+.fade
+  {
+    z-index: 1;
+  }
+.overlay-text {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    width: 90%;
+    height: auto;
+    background: #f1eeee;
+    color: black;
+    text-align: center;
+    padding: 20px;
+   
+  }
+ .cross{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-weight: 100;
+ } 
+
+.insideOverlay h6{
+    margin-right: 10%;
+    font-weight: 300;
+}

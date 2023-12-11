@@ -1,0 +1,45 @@
+
+.bar{
+    background-color:rgb(243, 237, 248);
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+  }
+  .fade
+  {
+    z-index: 1;
+  }
+  .image{
+    height: 590px; 
+  }
+  .fixed-text {
+    z-index: 2; 
+    color: rgb(125, 116, 152); 
+}
+
+.fixed-text h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.fixed-text p {
+    font-size: 2em;
+}
+
+.box{
+  background: linear-gradient(170deg,rgb(226, 105, 240),rgb(92, 70, 219));
+
+  
+}
+.box:hover{
+  background: linear-gradient(170deg,rgb(92, 70, 219),rgb(226, 105, 240));
+}
+.box a{
+  text-decoration: none;
+  color: beige;
+}
+
